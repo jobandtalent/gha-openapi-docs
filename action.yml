@@ -28,9 +28,6 @@ runs:
         # Fetch Git history from across all branches/tags,
         # to enable fetching OpenAPI specs from multiple branches
         fetch-depth: 0
-    - uses: actions/setup-node@v4
-      with:
-        node-version: "latest"
     - uses: actions/setup-java@v4
       with:
         distribution: corretto
