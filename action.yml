@@ -1,8 +1,8 @@
 name: OpenAPI GitHub Pages Documentation
 description: Convert OpenAPI specifications to API documentation and publish to GitHub Pages
 branding:
-  icon: 'upload-cloud'
-  color: 'white'
+  icon: "upload-cloud"
+  color: "white"
 
 # GitHub Action inputs
 inputs:
@@ -28,6 +28,9 @@ runs:
         # Fetch Git history from across all branches/tags,
         # to enable fetching OpenAPI specs from multiple branches
         fetch-depth: 0
+    - uses: actions/setup-node@v4
+      with:
+        node-version: "latest"
     - uses: actions/setup-java@v4
       with:
         distribution: corretto
